@@ -1,11 +1,10 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace OpenPdf
 {
     public class CustomWebView : WebView
     {
-        public static readonly BindableProperty UriProperty = BindableProperty.Create(propertyName: "Uri",
+        public static readonly BindableProperty UriProperty = BindableProperty.Create(propertyName: nameof(Uri),
                 returnType: typeof(string),
                 declaringType: typeof(CustomWebView),
                 defaultValue: default(string));
@@ -16,7 +15,7 @@ namespace OpenPdf
             set { SetValue(UriProperty, value); }
         }
 
-        public static readonly BindableProperty IsPdfProperty = BindableProperty.Create(propertyName: "IsPdf",
+        public static readonly BindableProperty IsPdfProperty = BindableProperty.Create(propertyName: nameof(IsPdf),
         returnType: typeof(bool),
         declaringType: typeof(CustomWebView),
         defaultValue: default(bool));
